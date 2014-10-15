@@ -14,6 +14,9 @@
 		D11D7DE819E4CB090031FA89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11D7DE719E4CB090031FA89 /* Images.xcassets */; };
 		D11D7DEB19E4CB090031FA89 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D11D7DE919E4CB090031FA89 /* LaunchScreen.xib */; };
 		D11D7DF719E4CB090031FA89 /* StadiometerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D11D7DF619E4CB090031FA89 /* StadiometerTests.m */; };
+		D11D7E0119E4CB2D0031FA89 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D11D7E0019E4CB2D0031FA89 /* CoreMotion.framework */; };
+		D11D7E0519E4D6870031FA89 /* MeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11D7E0419E4D6870031FA89 /* MeterViewController.m */; };
+		D11D7E0819E4DE250031FA89 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D11D7E0719E4DE250031FA89 /* DismissSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		D11D7DF019E4CB090031FA89 /* StadiometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StadiometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D11D7DF519E4CB090031FA89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11D7DF619E4CB090031FA89 /* StadiometerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StadiometerTests.m; sourceTree = "<group>"; };
+		D11D7E0019E4CB2D0031FA89 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		D11D7E0319E4D6870031FA89 /* MeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterViewController.h; sourceTree = "<group>"; };
+		D11D7E0419E4D6870031FA89 /* MeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterViewController.m; sourceTree = "<group>"; };
+		D11D7E0619E4DE250031FA89 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		D11D7E0719E4DE250031FA89 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D7E0119E4CB2D0031FA89 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,7 @@
 			children = (
 				D11D7DD919E4CB090031FA89 /* Stadiometer */,
 				D11D7DF319E4CB090031FA89 /* StadiometerTests */,
+				D11D7E0219E4CFFC0031FA89 /* Frameworks */,
 				D11D7DD819E4CB090031FA89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,12 +93,16 @@
 			children = (
 				D11D7DDE19E4CB090031FA89 /* AppDelegate.h */,
 				D11D7DDF19E4CB090031FA89 /* AppDelegate.m */,
-				D11D7DE119E4CB090031FA89 /* ViewController.h */,
-				D11D7DE219E4CB090031FA89 /* ViewController.m */,
-				D11D7DE419E4CB090031FA89 /* Main.storyboard */,
+				D11D7E0619E4DE250031FA89 /* DismissSegue.h */,
+				D11D7E0719E4DE250031FA89 /* DismissSegue.m */,
 				D11D7DE719E4CB090031FA89 /* Images.xcassets */,
 				D11D7DE919E4CB090031FA89 /* LaunchScreen.xib */,
+				D11D7DE419E4CB090031FA89 /* Main.storyboard */,
+				D11D7E0319E4D6870031FA89 /* MeterViewController.h */,
+				D11D7E0419E4D6870031FA89 /* MeterViewController.m */,
 				D11D7DDA19E4CB090031FA89 /* Supporting Files */,
+				D11D7DE119E4CB090031FA89 /* ViewController.h */,
+				D11D7DE219E4CB090031FA89 /* ViewController.m */,
 			);
 			path = Stadiometer;
 			sourceTree = "<group>";
@@ -117,6 +131,14 @@
 				D11D7DF519E4CB090031FA89 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D11D7E0219E4CFFC0031FA89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D11D7E0019E4CB2D0031FA89 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D7E0519E4D6870031FA89 /* MeterViewController.m in Sources */,
 				D11D7DE319E4CB090031FA89 /* ViewController.m in Sources */,
+				D11D7E0819E4DE250031FA89 /* DismissSegue.m in Sources */,
 				D11D7DE019E4CB090031FA89 /* AppDelegate.m in Sources */,
 				D11D7DDD19E4CB090031FA89 /* main.m in Sources */,
 			);

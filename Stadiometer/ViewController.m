@@ -7,19 +7,29 @@
 //
 
 #import "ViewController.h"
+#import <CoreMotion/CoreMotion.h>
 
 @interface ViewController ()
-
+{
+	__weak IBOutlet UIButton *startButton;
+}
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+	// init altimeter
+	if ( ![CMAltimeter isRelativeAltitudeAvailable] )
+	{
+		[startButton setTitle:@"サポートしていません。" forState:UIControlStateNormal];
+	}
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
 }
